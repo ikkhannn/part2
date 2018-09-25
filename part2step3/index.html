@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!-- bootstrap css -->
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <!-- main css -->
+ <link rel="stylesheet" href="css/main.css">
+ <!-- google fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+ <!-- font awesome -->
+ <link rel="stylesheet" href="css/all.css">
+ <title>Todo list</title>
+ <style>
+ </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+     <div class="col mx-auto col-md-8 mt-3 text-center">
+<h3 class="text-capitalize mb-4">to do list</h3>
+
+<form id="itemForm" class="my-3" method="POST" onSubmit="addTodo(); return false;">
+<div class="input-group">
+<input type="text" id="todo" class="form-control text-capitalize" name="todo" placeholder="What do you need to do?" style="width: 200px;">
+<div class="input-group-append">
+<button type="submit" onClick="return empty()" class="btn btn-primary btn-circle btn-lg" value="Add Todo Item"><i class="fas fa-plus-circle"></i></button>
+      </div>
+     </div>
+   </form>
+
+   <div class="item-container">
+     <!-- end of form  -->
+     <div class="item-list my-5">
+
+<ul style="list-style:none;" id="todoItems"></ul>
+
+</div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+<!-- script js -->
+<script>
+function empty() {
+    var x;
+    x = document.getElementById("todo").value;
+    if (x == "") {
+        alert("Enter a Valid task");
+        return false;
+    };
+}
+</script>
+</body>
+
+</html>
